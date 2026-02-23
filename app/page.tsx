@@ -1,10 +1,10 @@
 export default function Home() {
   return (
     <div className="bg-[#fefcf8]">
-      {/* Navbar */}
-      <nav className="bg-[#354c41] h-[60px] w-full">
+      {/* ── NAVBAR ── */}
+      <nav className="bg-[#354c41] h-[60px]">
         {/* Mobile */}
-        <div className="flex items-center justify-between h-full px-5 lg:hidden">
+        <div className="flex xl:hidden items-center justify-between h-full px-5">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/logo.svg" alt="Block Sports" style={{ height: "25.6px", width: "73px" }} />
           <button aria-label="Open menu" className="text-white">
@@ -25,13 +25,13 @@ export default function Home() {
             </svg>
           </button>
         </div>
-        {/* Desktop */}
-        <div className="hidden lg:block relative h-full min-w-[1800px] overflow-hidden">
-          <div className="absolute top-1/2 -translate-y-1/2 left-[253px]">
+        {/* Desktop — logo at 14% from left, links at 50.7% (mirrors the photo column) */}
+        <div className="hidden xl:block relative h-full overflow-hidden">
+          <div className="absolute top-1/2 -translate-y-1/2 left-[14%]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/logo.svg" alt="Block Sports" style={{ height: "25.6px", width: "73px" }} />
           </div>
-          <div className="absolute top-[20px] left-[913px] flex gap-[40px] items-center">
+          <div className="absolute top-[20px] left-[50.7%] flex gap-[40px] items-center">
             <span className="text-white text-[16px] font-bold font-sans leading-[24px]">Home</span>
             <span className="text-white text-[16px] font-normal font-sans leading-[24px]">Boxing schedule</span>
             <span className="text-white text-[16px] font-normal font-sans leading-[24px]">Strenght schedule</span>
@@ -41,21 +41,18 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* ── MOBILE LAYOUT ── */}
-      <div className="lg:hidden">
+      {/* ── MOBILE LAYOUT (up to 1280px) ── */}
+      <div className="xl:hidden">
         {/* Photo collage + coral peek */}
         <div className="relative mt-4 overflow-hidden" style={{ height: "340px" }}>
-          {/* Photo card */}
           <div
             className="absolute top-0 rounded-[20px] overflow-hidden bg-white"
             style={{ left: "20px", right: "35px", height: "340px" }}
           >
-            {/* Boxing ring — top-left */}
             <div className="absolute" style={{ left: "-148px", top: "-134px", width: "473px", height: "315px" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/gym-boxing.png" alt="Boxing ring" className="absolute inset-0 w-full h-full object-cover" />
             </div>
-            {/* Weights area — bottom */}
             <div className="absolute overflow-hidden" style={{ left: "-66px", top: "182px", width: "427px", height: "206px" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -65,13 +62,12 @@ export default function Home() {
                 style={{ height: "138.11%", left: "-0.04%", top: "-38.11%", width: "100.08%" }}
               />
             </div>
-            {/* Punching bag — right column */}
             <div className="absolute" style={{ left: "156px", top: "-61px", width: "162px", height: "242px" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/gym-bag.png" alt="Punching bag" className="absolute inset-0 w-full h-full object-cover" />
             </div>
           </div>
-          {/* Coral panel peeking from right */}
+          {/* Coral panel peeking */}
           <div
             className="absolute top-0 bg-[#d36560] rounded-[20px]"
             style={{ right: "-180px", width: "200px", height: "340px" }}
@@ -130,14 +126,30 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ── DESKTOP LAYOUT ── */}
-      <div className="hidden lg:block min-w-[1800px]">
+      {/* ── DESKTOP LAYOUT (1280px+) ── */}
+      {/*
+        All positions are vw/% ratios derived from the original 1800px Figma design:
+          left 14%     = 253px / 1800px
+          left 50.7%   = 913px / 1800px  (photo col + nav links)
+          left 87.4%   = 1573px / 1800px (coral panel)
+          top  5.7vw   = 103px / 1800px
+          top  17.2vw  = 310px / 1800px
+          top  38vw    = 684px / 1800px
+          h    48.8vw  = 878px / 1800px
+        Photo collage internal images are converted to % of their 635×671 container.
+      */}
+      <div className="hidden xl:block">
         {/* Hero */}
-        <div className="relative" style={{ height: "878px" }}>
+        <div className="relative overflow-x-hidden" style={{ minHeight: "48.8vw" }}>
           {/* Heading */}
           <h1
-            className="absolute font-heading font-black text-[70px] text-[#354c41] leading-normal m-0"
-            style={{ left: "252px", top: "103px", width: "636px" }}
+            className="absolute font-heading font-black text-[#354c41] leading-normal m-0"
+            style={{
+              left: "14%",
+              top: "5.7vw",
+              width: "35.3%",
+              fontSize: "clamp(36px, 3.9vw, 70px)",
+            }}
           >
             Performance{" "}
             <br />
@@ -147,7 +159,7 @@ export default function Home() {
           {/* Body text */}
           <div
             className="absolute text-[#354c41] text-[16px] font-medium font-sans leading-[24px]"
-            style={{ left: "253px", top: "310px", width: "505px" }}
+            style={{ left: "14%", top: "17.2vw", width: "28.1%" }}
           >
             <p className="mb-0">
               Block Sports, located in Naujamiestis inside the iconic Loftas quarter — a raw, industrial space in former
@@ -171,24 +183,23 @@ export default function Home() {
           <a
             href="#"
             className="absolute bg-[#d36560] flex items-center justify-center rounded-[6px] text-white text-[16px] font-medium font-sans leading-[24px] no-underline"
-            style={{ left: "253px", top: "684px", width: "174px", height: "40px" }}
+            style={{ left: "14%", top: "38vw", width: "174px", height: "40px" }}
           >
             Join us
           </a>
 
-          {/* Photo collage */}
+          {/* Photo collage — width 35.3% of viewport, height via aspect-ratio */}
           <div
             className="absolute bg-white rounded-[20px] overflow-hidden"
-            style={{ left: "913px", top: "103px", width: "635px", height: "671px" }}
+            style={{ left: "50.7%", top: "5.7vw", width: "35.3%", aspectRatio: "635/671" }}
           >
-            <div className="absolute" style={{ left: "-296px", top: "-267px", width: "945px", height: "630px" }}>
+            {/* Boxing ring — top-left quadrant, bleeds outside container */}
+            <div className="absolute" style={{ left: "-46.6%", top: "-39.8%", width: "148.8%", height: "93.9%" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/gym-boxing.png" alt="Boxing ring" className="absolute inset-0 w-full h-full object-cover" />
             </div>
-            <div
-              className="absolute overflow-hidden"
-              style={{ left: "-131px", top: "363px", width: "853px", height: "412px" }}
-            >
+            {/* Weights area — bottom half, bleeds left */}
+            <div className="absolute overflow-hidden" style={{ left: "-20.6%", top: "54.1%", width: "134.3%", height: "61.4%" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/gym-weights.png"
@@ -197,23 +208,24 @@ export default function Home() {
                 style={{ height: "138.11%", left: "-0.04%", top: "-38.11%", width: "100.08%" }}
               />
             </div>
-            <div className="absolute" style={{ left: "312px", top: "-121px", width: "323px", height: "484px" }}>
+            {/* Punching bag — right column */}
+            <div className="absolute" style={{ left: "49.1%", top: "-18%", width: "50.9%", height: "72.1%" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/gym-bag.png" alt="Punching bag" className="absolute inset-0 w-full h-full object-cover" />
             </div>
           </div>
 
-          {/* Coral right panel */}
+          {/* Coral panel — partially visible at right edge */}
           <div
             className="absolute bg-[#d36560] rounded-[20px]"
-            style={{ left: "1573px", top: "103px", width: "635px", height: "671px" }}
+            style={{ left: "87.4%", top: "5.7vw", width: "35.3%", aspectRatio: "635/671" }}
           />
         </div>
 
         {/* Footer bar */}
         <div
-          className="flex items-center justify-between text-[#354c41] text-[16px] font-sans"
-          style={{ paddingLeft: "253px", paddingRight: "252px", height: "63px" }}
+          className="flex items-center justify-between text-[#354c41] text-[16px] font-sans px-[14%]"
+          style={{ height: "63px" }}
         >
           <p className="font-bold leading-[24px] m-0 shrink-0">Boxing · Conditioning · Recovery</p>
           <a
