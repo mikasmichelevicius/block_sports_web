@@ -10,7 +10,8 @@
       "mcp__figma-http__get_design_context",
       "mcp__figma-http__get_screenshot",
       "Bash(npm run:*)",
-      "Bash(pkill:*)"
+      "Bash(pkill:*)",
+      "Bash(curl:*)"
     ]
   }
 }

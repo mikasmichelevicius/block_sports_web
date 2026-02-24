@@ -38,12 +38,12 @@ export default function Home() {
           >
             <div className="absolute" style={{ left: "-148px", top: "-134px", width: "473px", height: "315px" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/gym-boxing.png" alt="Boxing ring" className="absolute inset-0 w-full h-full object-cover" />
+              <img src="/gym-boxing.jpg" alt="Boxing ring" className="absolute inset-0 w-full h-full object-cover" />
             </div>
             <div className="absolute overflow-hidden" style={{ left: "-66px", top: "182px", width: "427px", height: "206px" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/gym-weights.png"
+                src="/gym-weights.jpg"
                 alt="Weights area"
                 className="absolute max-w-none"
                 style={{ height: "138.11%", left: "-0.04%", top: "-38.11%", width: "100.08%" }}
@@ -51,7 +51,7 @@ export default function Home() {
             </div>
             <div className="absolute" style={{ left: "156px", top: "-61px", width: "162px", height: "242px" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/gym-bag.png" alt="Punching bag" className="absolute inset-0 w-full h-full object-cover" />
+              <img src="/gym-bag.jpg" alt="Punching bag" className="absolute inset-0 w-full h-full object-cover" />
             </div>
           </div>
           {/* Coral panel peeking */}
@@ -188,13 +188,13 @@ export default function Home() {
             {/* Boxing ring — top-left quadrant, bleeds outside container */}
             <div className="absolute" style={{ left: "-46.6%", top: "-39.8%", width: "148.8%", height: "93.9%" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/gym-boxing.png" alt="Boxing ring" className="absolute inset-0 w-full h-full object-cover" />
+              <img src="/gym-boxing.jpg" alt="Boxing ring" className="absolute inset-0 w-full h-full object-cover" />
             </div>
             {/* Weights area — bottom half, bleeds left */}
             <div className="absolute overflow-hidden" style={{ left: "-20.6%", top: "54.1%", width: "134.3%", height: "61.4%" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/gym-weights.png"
+                src="/gym-weights.jpg"
                 alt="Weights area"
                 className="absolute max-w-none"
                 style={{ height: "138.11%", left: "-0.04%", top: "-38.11%", width: "100.08%" }}
@@ -203,7 +203,7 @@ export default function Home() {
             {/* Punching bag — right column */}
             <div className="absolute" style={{ left: "49.1%", top: "-18%", width: "50.9%", height: "72.1%" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/gym-bag.png" alt="Punching bag" className="absolute inset-0 w-full h-full object-cover" />
+              <img src="/gym-bag.jpg" alt="Punching bag" className="absolute inset-0 w-full h-full object-cover" />
             </div>
           </div>
 
