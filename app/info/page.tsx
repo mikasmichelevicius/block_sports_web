@@ -36,8 +36,7 @@ export default function InfoPage() {
           {/* ── SECTION 1: Information ── */}
           <section className="flex flex-col gap-6 xl:gap-[24px]">
             <h1
-              className="font-heading font-black text-[#354c41] leading-normal m-0"
-              style={{ fontSize: "clamp(40px, 3.9vw, 70px)" }}
+              className="font-heading font-black text-[#354c41] leading-normal m-0 text-[36px] xl:[font-size:clamp(40px,3.9vw,70px)]"
             >
               Information
             </h1>
@@ -74,8 +73,7 @@ export default function InfoPage() {
           {/* ── SECTION 2: Pricing ── */}
           <section className="flex flex-col gap-6 xl:gap-[24px]">
             <h2
-              className="font-heading font-black text-[#354c41] leading-normal m-0"
-              style={{ fontSize: "clamp(40px, 3.9vw, 70px)" }}
+              className="font-heading font-black text-[#354c41] leading-normal m-0 text-[36px] xl:[font-size:clamp(40px,3.9vw,70px)]"
             >
               Pricing
             </h2>
@@ -134,8 +132,7 @@ export default function InfoPage() {
           {/* ── SECTION 3: Other information ── */}
           <section className="flex flex-col gap-6 xl:gap-[24px]">
             <h2
-              className="font-heading font-black text-[#354c41] leading-normal m-0"
-              style={{ fontSize: "clamp(40px, 3.9vw, 70px)" }}
+              className="font-heading font-black text-[#354c41] leading-normal m-0 text-[36px] xl:[font-size:clamp(40px,3.9vw,70px)]"
             >
               Other iformation
             </h2>

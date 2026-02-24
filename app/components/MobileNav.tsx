@@ -53,42 +53,42 @@ export default function MobileNav() {
           </div>
 
           {/* Nav links */}
-          <div className="flex flex-col items-center gap-[120px] pt-[80px]">
+          <div className="flex flex-col items-center gap-[16vw] pt-[12vw]">
             <Link
               href="/"
-              className="text-white text-[40px] font-bold font-sans leading-normal no-underline"
+              className="text-white text-[5.5vw] font-bold font-sans leading-normal no-underline"
               onClick={() => setOpen(false)}
             >
               Home
             </Link>
             <Link
               href="/schedule?type=boxing"
-              className="text-white text-[40px] font-normal font-sans leading-normal no-underline"
+              className="text-white text-[5.5vw] font-normal font-sans leading-normal no-underline"
               onClick={() => setOpen(false)}
             >
               Boxing schedule
             </Link>
             <Link
               href="/schedule?type=strength"
-              className="text-white text-[40px] font-normal font-sans leading-normal no-underline"
+              className="text-white text-[5.5vw] font-normal font-sans leading-normal no-underline"
               onClick={() => setOpen(false)}
             >
               Strenght schedule
             </Link>
             <Link
               href="/membership"
-              className="text-white text-[40px] font-normal font-sans leading-normal no-underline"
+              className="text-white text-[5.5vw] font-normal font-sans leading-normal no-underline"
               onClick={() => setOpen(false)}
             >
               Membership/shop
             </Link>
-            <a
+            <Link
               href="/info"
-              className="text-white text-[40px] font-normal font-sans leading-normal no-underline"
+              className="text-white text-[5.5vw] font-normal font-sans leading-normal no-underline"
               onClick={() => setOpen(false)}
             >
               Info
-            </a>
+            </Link>
           </div>
         </div>
       )}
