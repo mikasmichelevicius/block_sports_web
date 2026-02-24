@@ -1,3 +1,6 @@
+import Link from "next/link";
+import MobileNav from "@/app/components/MobileNav";
+
 export default function Home() {
   return (
     <div className="bg-[#fefcf8]">
@@ -6,37 +9,21 @@ export default function Home() {
         {/* Mobile */}
         <div className="flex xl:hidden items-center justify-between h-full px-5">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.svg" alt="Block Sports" style={{ height: "25.6px", width: "73px" }} />
-          <button aria-label="Open menu" className="text-white">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              viewBox="0 0 24 24"
-            >
-              <line x1="3" y1="6" x2="21" y2="6" />
-              <line x1="3" y1="12" x2="21" y2="12" />
-              <line x1="3" y1="18" x2="21" y2="18" />
-            </svg>
-          </button>
+          <Link href="/"><img src="/logo.svg" alt="Block Sports" style={{ height: "25.6px", width: "73px" }} /></Link>
+          <MobileNav />
         </div>
         {/* Desktop — logo at 14% from left, links at 50.7% (mirrors the photo column) */}
         <div className="hidden xl:block relative h-full overflow-hidden">
           <div className="absolute top-1/2 -translate-y-1/2 left-[14%]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo.svg" alt="Block Sports" style={{ height: "25.6px", width: "73px" }} />
+            <Link href="/"><img src="/logo.svg" alt="Block Sports" style={{ height: "25.6px", width: "73px" }} /></Link>
           </div>
           <div className="absolute top-[20px] left-[50.7%] flex gap-[40px] items-center">
-            <span className="text-white text-[16px] font-bold font-sans leading-[24px]">Home</span>
-            <span className="text-white text-[16px] font-normal font-sans leading-[24px]">Boxing schedule</span>
-            <span className="text-white text-[16px] font-normal font-sans leading-[24px]">Strenght schedule</span>
+            <Link href="/" className="text-white text-[16px] font-bold font-sans leading-[24px] no-underline">Home</Link>
+            <Link href="/boxing-schedule" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Boxing schedule</Link>
+            <Link href="/strength-schedule" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Strenght schedule</Link>
             <span className="text-white text-[16px] font-normal font-sans leading-[24px]">Membership/shop</span>
-            <span className="text-white text-[16px] font-normal font-sans leading-[24px]">Info</span>
+            <Link href="/info" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Info</Link>
           </div>
         </div>
       </nav>
@@ -141,52 +128,58 @@ export default function Home() {
       <div className="hidden xl:block">
         {/* Hero */}
         <div className="relative overflow-x-hidden" style={{ minHeight: "48.8vw" }}>
-          {/* Heading */}
-          <h1
-            className="absolute font-heading font-black text-[#354c41] leading-normal m-0"
-            style={{
-              left: "14%",
-              top: "5.7vw",
-              width: "35.3%",
-              fontSize: "clamp(36px, 3.9vw, 70px)",
-            }}
-          >
-            Performance{" "}
-            <br />
-            &amp; playful spirit
-          </h1>
-
-          {/* Body text */}
+          {/*
+            Left content column — single container, flex-col.
+            Gaps are vw-scaled from the original 1800px Figma:
+              heading→body gap: 39px / 1800 ≈ 2.2vw
+              body→button gap:  63px / 1800 ≈ 3.5vw
+          */}
           <div
-            className="absolute text-[#354c41] text-[16px] font-medium font-sans leading-[24px]"
-            style={{ left: "14%", top: "17.2vw", width: "28.1%" }}
+            className="absolute flex flex-col"
+            style={{ left: "14%", top: "5.7vw", width: "35.3%" }}
           >
-            <p className="mb-0">
-              Block Sports, located in Naujamiestis inside the iconic Loftas quarter — a raw, industrial space in former
-              factory buildings — offers a modern, high-energy training environment for those who want more than a
-              typical gym.
-            </p>
-            <p className="mb-0">&nbsp;</p>
-            <p className="mb-0">
-              We specialize in boxing, strength training, and performance-based strength measurements, led by experienced
-              coaches. Whether you&apos;re a beginner or experienced, every session is designed to build real skill,
-              power, and measurable progress.
-            </p>
-            <p className="mb-0">&nbsp;</p>
-            <p className="mb-0">
-              Block Sports is modern, hip, and community-driven — where serious training meets an authentic industrial
-              vibe in the heart of Vilnius.
-            </p>
-          </div>
+            {/* 1. Heading — Crimson Pro Black, scales with viewport */}
+            <h1
+              className="font-heading font-black text-[#354c41] leading-normal m-0"
+              style={{ fontSize: "clamp(36px, 3.9vw, 70px)" }}
+            >
+              Performance{" "}
+              <br />
+              &amp; playful spirit
+            </h1>
 
-          {/* Join us button */}
-          <a
-            href="#"
-            className="absolute bg-[#d36560] flex items-center justify-center rounded-[6px] text-white text-[16px] font-medium font-sans leading-[24px] no-underline"
-            style={{ left: "14%", top: "38vw", width: "174px", height: "40px" }}
-          >
-            Join us
-          </a>
+            {/* 2. Body text — Inter Medium 16px */}
+            <div
+              className="text-[#354c41] text-[16px] font-medium font-sans leading-[24px]"
+              style={{ marginTop: "2.2vw" }}
+            >
+              <p className="mb-0">
+                Block Sports, located in Naujamiestis inside the iconic Loftas quarter — a raw, industrial space in
+                former factory buildings — offers a modern, high-energy training environment for those who want more
+                than a typical gym.
+              </p>
+              <p className="mb-0">&nbsp;</p>
+              <p className="mb-0">
+                We specialize in boxing, strength training, and performance-based strength measurements, led by
+                experienced coaches. Whether you&apos;re a beginner or experienced, every session is designed to
+                build real skill, power, and measurable progress.
+              </p>
+              <p className="mb-0">&nbsp;</p>
+              <p className="mb-0">
+                Block Sports is modern, hip, and community-driven — where serious training meets an authentic
+                industrial vibe in the heart of Vilnius.
+              </p>
+            </div>
+
+            {/* 3. Join us button */}
+            <a
+              href="#"
+              className="bg-[#d36560] inline-flex items-center justify-center rounded-[6px] text-white text-[16px] font-medium font-sans leading-[24px] no-underline self-start"
+              style={{ marginTop: "3.5vw", width: "174px", height: "40px" }}
+            >
+              Join us
+            </a>
+          </div>
 
           {/* Photo collage — width 35.3% of viewport, height via aspect-ratio */}
           <div
