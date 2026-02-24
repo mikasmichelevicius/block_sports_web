@@ -62,14 +62,14 @@ export default function MobileNav() {
               Home
             </Link>
             <Link
-              href="/boxing-schedule"
+              href="/schedule?type=boxing"
               className="text-white text-[40px] font-normal font-sans leading-normal no-underline"
               onClick={() => setOpen(false)}
             >
               Boxing schedule
             </Link>
             <Link
-              href="/strength-schedule"
+              href="/schedule?type=strength"
               className="text-white text-[40px] font-normal font-sans leading-normal no-underline"
               onClick={() => setOpen(false)}
             >

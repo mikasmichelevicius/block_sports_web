@@ -1,8 +1,25 @@
+"use client";
+
+import { useSearchParams } from "next/navigation";
+import { useState, useEffect, Suspense } from "react";
 import Link from "next/link";
 import MobileNav from "@/app/components/MobileNav";
 import BoxingWidget from "@/app/components/BoxingWidget";
+import StrengthWidget from "@/app/components/StrengthWidget";
 
-export default function BoxingSchedulePage() {
+function ScheduleContent() {
+  const searchParams = useSearchParams();
+  const type = searchParams.get("type") ?? "boxing";
+  const isBoxing = type === "boxing";
+
+  const [mountedBoxing, setMountedBoxing] = useState(false);
+  const [mountedStrength, setMountedStrength] = useState(false);
+
+  useEffect(() => {
+    if (isBoxing) setMountedBoxing(true);
+    else setMountedStrength(true);
+  }, [isBoxing]);
+
   return (
     <div className="bg-[#fefcf8]">
 
@@ -22,8 +39,16 @@ export default function BoxingSchedulePage() {
           </div>
           <div className="absolute top-[20px] left-[50.7%] flex gap-[40px] items-center">
             <Link href="/" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Home</Link>
-            <span className="text-white text-[16px] font-bold font-sans leading-[24px]">Boxing schedule</span>
-            <Link href="/strength-schedule" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Strenght schedule</Link>
+            {isBoxing ? (
+              <span className="text-white text-[16px] font-bold font-sans leading-[24px]">Boxing schedule</span>
+            ) : (
+              <Link href="/schedule?type=boxing" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Boxing schedule</Link>
+            )}
+            {!isBoxing ? (
+              <span className="text-white text-[16px] font-bold font-sans leading-[24px]">Strenght schedule</span>
+            ) : (
+              <Link href="/schedule?type=strength" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Strenght schedule</Link>
+            )}
             <Link href="/info" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Membership/shop</Link>
             <Link href="/info" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Info</Link>
           </div>
@@ -36,9 +61,14 @@ export default function BoxingSchedulePage() {
           className="font-heading font-black text-[#354c41] leading-normal m-0 mb-[40px]"
           style={{ fontSize: "clamp(40px, 3.9vw, 70px)" }}
         >
-          Boxing schedule
+          {isBoxing ? "Boxing schedule" : "Strength schedule"}
         </h1>
-        <BoxingWidget />
+        <div style={{ display: isBoxing ? "block" : "none" }}>
+          {mountedBoxing && <BoxingWidget />}
+        </div>
+        <div style={{ display: isBoxing ? "none" : "block" }}>
+          {mountedStrength && <StrengthWidget />}
+        </div>
       </main>
 
       {/* ── FOOTER ── */}
@@ -60,5 +90,13 @@ export default function BoxingSchedulePage() {
       </div>
 
     </div>
+  );
+}
+
+export default function SchedulePage() {
+  return (
+    <Suspense>
+      <ScheduleContent />
+    </Suspense>
   );
 }

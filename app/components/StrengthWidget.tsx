@@ -48,6 +48,11 @@ export default function StrengthWidget() {
       // Clear container so the widget mounts fresh on the next visit
       const el = document.getElementById("bsport-widget-745660");
       if (el) el.innerHTML = "";
+      // Remove CDN script and global so the widget re-initialises on next mount
+      const cdn = document.getElementById("bsport-widget-cdn");
+      if (cdn) cdn.remove();
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      delete (window as any).BsportWidget;
     };
   }, []);
 

@@ -20,8 +20,8 @@ export default function Home() {
           </div>
           <div className="absolute top-[20px] left-[50.7%] flex gap-[40px] items-center">
             <Link href="/" className="text-white text-[16px] font-bold font-sans leading-[24px] no-underline">Home</Link>
-            <Link href="/boxing-schedule" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Boxing schedule</Link>
-            <Link href="/strength-schedule" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Strenght schedule</Link>
+            <Link href="/schedule?type=boxing" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Boxing schedule</Link>
+            <Link href="/schedule?type=strength" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Strenght schedule</Link>
             <span className="text-white text-[16px] font-normal font-sans leading-[24px]">Membership/shop</span>
             <Link href="/info" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Info</Link>
           </div>
