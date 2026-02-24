@@ -53,7 +53,7 @@ export default function MobileNav() {
           </div>
 
           {/* Nav links */}
-          <div className="flex flex-col items-center gap-[60px] pt-[80px]">
+          <div className="flex flex-col items-center gap-[120px] pt-[80px]">
             <Link
               href="/"
               className="text-white text-[40px] font-bold font-sans leading-normal no-underline"
@@ -75,13 +75,13 @@ export default function MobileNav() {
             >
               Strenght schedule
             </Link>
-            <a
-              href="#"
+            <Link
+              href="/membership"
               className="text-white text-[40px] font-normal font-sans leading-normal no-underline"
               onClick={() => setOpen(false)}
             >
               Membership/shop
-            </a>
+            </Link>
             <a
               href="/info"
               className="text-white text-[40px] font-normal font-sans leading-normal no-underline"

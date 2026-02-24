@@ -22,7 +22,7 @@ export default function Home() {
             <Link href="/" className="text-white text-[16px] font-bold font-sans leading-[24px] no-underline">Home</Link>
             <Link href="/schedule?type=boxing" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Boxing schedule</Link>
             <Link href="/schedule?type=strength" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Strenght schedule</Link>
-            <span className="text-white text-[16px] font-normal font-sans leading-[24px]">Membership/shop</span>
+            <Link href="/membership" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Membership/shop</Link>
             <Link href="/info" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Info</Link>
           </div>
         </div>
@@ -87,13 +87,13 @@ export default function Home() {
             </p>
           </div>
           <div className="flex justify-center">
-            <a
-              href="#"
+            <Link
+              href="/membership"
               className="bg-[#d36560] flex items-center justify-center rounded-[6px] text-white text-[16px] font-medium font-sans leading-[24px] no-underline"
               style={{ width: "174px", height: "40px" }}
             >
               Join us
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -105,11 +105,10 @@ export default function Home() {
             className="no-underline text-center"
             style={{ color: "#354c41" }}
           >
-            <span className="font-bold leading-[24px]">Vytenio g. 52, Vilnius</span>
-            <span className="font-bold leading-[24px] underline">, Lithuania</span>
+            <span className="font-bold leading-[24px] underline">Vytenio g. 52, Vilnius, Lithuania</span>
           </a>
           <p className="font-bold leading-[24px] m-0">+37062692132</p>
-          <p className="font-bold leading-[24px] m-0 underline cursor-pointer">Membership/shop</p>
+          <Link href="/membership" className="font-bold leading-[24px] m-0 underline cursor-pointer no-underline" style={{ color: "#354c41" }}>Membership/shop</Link>
         </div>
       </div>
 
@@ -140,7 +139,7 @@ export default function Home() {
           >
             {/* 1. Heading — Crimson Pro Black, scales with viewport */}
             <h1
-              className="font-heading font-black text-[#354c41] leading-normal m-0"
+              className="font-heading font-black text-[#354c41] leading-[1.1] m-0"
               style={{ fontSize: "clamp(36px, 3.9vw, 70px)" }}
             >
               Performance{" "}
@@ -172,13 +171,13 @@ export default function Home() {
             </div>
 
             {/* 3. Join us button */}
-            <a
-              href="#"
+            <Link
+              href="/membership"
               className="bg-[#d36560] inline-flex items-center justify-center rounded-[6px] text-white text-[16px] font-medium font-sans leading-[24px] no-underline self-start"
               style={{ marginTop: "3.5vw", width: "174px", height: "40px" }}
             >
               Join us
-            </a>
+            </Link>
           </div>
 
           {/* Photo collage — width 35.3% of viewport, height via aspect-ratio */}
@@ -226,11 +225,10 @@ export default function Home() {
             className="leading-[24px] shrink-0 no-underline"
             style={{ color: "#354c41" }}
           >
-            <span className="font-bold">Vytenio g. 52, Vilnius</span>
-            <span className="font-bold underline">, Lithuania</span>
+            <span className="font-bold underline">Vytenio g. 52, Vilnius, Lithuania</span>
           </a>
           <p className="font-bold leading-[24px] m-0 shrink-0">+37062692132</p>
-          <p className="font-bold leading-[24px] m-0 underline shrink-0 cursor-pointer">Membership/shop</p>
+          <Link href="/membership" className="font-bold leading-[24px] m-0 underline shrink-0 cursor-pointer no-underline" style={{ color: "#354c41" }}>Membership/shop</Link>
         </div>
       </div>
     </div>

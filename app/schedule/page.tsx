@@ -49,16 +49,16 @@ function ScheduleContent() {
             ) : (
               <Link href="/schedule?type=strength" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Strenght schedule</Link>
             )}
-            <Link href="/info" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Membership/shop</Link>
+            <Link href="/membership" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Membership/shop</Link>
             <Link href="/info" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Info</Link>
           </div>
         </div>
       </nav>
 
       {/* ── CONTENT ── */}
-      <main className="px-[14%] pt-[61px] pb-[100px]">
+      <main className="px-5 xl:px-[14%] pt-10 xl:pt-[61px] pb-16 xl:pb-[100px]">
         <h1
-          className="font-heading font-black text-[#354c41] leading-normal m-0 mb-[40px]"
+          className="font-heading font-black text-[#354c41] leading-normal m-0 mb-8 xl:mb-[40px]"
           style={{ fontSize: "clamp(40px, 3.9vw, 70px)" }}
         >
           {isBoxing ? "Boxing schedule" : "Strength schedule"}
@@ -72,21 +72,21 @@ function ScheduleContent() {
       </main>
 
       {/* ── FOOTER ── */}
-      <div
-        className="flex items-center justify-between text-[#354c41] text-[16px] font-sans px-[14%]"
-        style={{ height: "63px" }}
+      <div className="text-[#354c41] text-[16px] font-sans px-5 xl:px-[14%]
+        flex flex-col items-center gap-4 py-8
+        xl:flex-row xl:justify-between xl:py-0 xl:gap-0"
+        style={{ minHeight: "63px" }}
       >
         <p className="font-bold leading-[24px] m-0 shrink-0">Boxing · Conditioning · Recovery</p>
         <a
           href="https://maps.app.goo.gl/yQWmykY26Yv5tQY98"
-          className="leading-[24px] shrink-0 no-underline"
+          className="leading-[24px] shrink-0 no-underline text-center"
           style={{ color: "#354c41" }}
         >
-          <span className="font-bold">Vytenio g. 52, Vilnius</span>
-          <span className="font-bold underline">, Lithuania</span>
+          <span className="font-bold underline">Vytenio g. 52, Vilnius, Lithuania</span>
         </a>
         <p className="font-bold leading-[24px] m-0 shrink-0">+37062692132</p>
-        <p className="font-bold leading-[24px] m-0 underline shrink-0 cursor-pointer">Membership/shop</p>
+        <Link href="/membership" className="font-bold leading-[24px] m-0 underline shrink-0 cursor-pointer no-underline" style={{ color: "#354c41" }}>Membership/shop</Link>
       </div>
 
     </div>
