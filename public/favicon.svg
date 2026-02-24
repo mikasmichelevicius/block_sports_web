@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!--
+    Outer silhouette: left stem + upper bump + lower bump, traced clockwise.
+    Two inner counter-shapes (holes) traced as separate subpaths.
+    fill-rule="evenodd" punches out the holes.
+  -->
+  <path fill="#c35a54" fill-rule="evenodd" d="
+    M 14 6
+    L 14 94
+    L 47 94
+    C 64 94 76 84 76 70
+    C 76 60 70 53 60 50
+    C 68 47 72 39 72 29
+    C 72 15 61 6 44 6
+    Z
+
+    M 30 46
+    L 30 14
+    L 43 14
+    C 55 14 60 20 60 29
+    C 60 38 54 46 43 46
+    Z
+
+    M 30 86
+    L 30 54
+    L 46 54
+    C 60 54 64 61 64 70
+    C 64 79 59 86 46 86
+    Z
+  "/>
+</svg>

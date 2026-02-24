@@ -9,7 +9,8 @@
       "mcp__figma-sse__get_metadata",
       "mcp__figma-http__get_design_context",
       "mcp__figma-http__get_screenshot",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(pkill:*)"
     ]
   }
 }
