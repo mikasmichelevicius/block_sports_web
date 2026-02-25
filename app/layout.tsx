@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Crimson_Pro } from "next/font/google";
+import "bootstrap/dist/css/bootstrap-grid.min.css";
 import "./globals.css";
 
 const inter = Inter({

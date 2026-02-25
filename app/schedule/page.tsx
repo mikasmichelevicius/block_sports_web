@@ -3,7 +3,7 @@
 import { useSearchParams } from "next/navigation";
 import { useState, useEffect, Suspense } from "react";
 import Link from "next/link";
-import MobileNav from "@/app/components/MobileNav";
+import Header from "@/app/components/Header";
 import BoxingWidget from "@/app/components/BoxingWidget";
 import StrengthWidget from "@/app/components/StrengthWidget";
 
@@ -23,37 +23,7 @@ function ScheduleContent() {
   return (
     <div className="bg-[#fefcf8]">
 
-      {/* ── NAVBAR ── */}
-      <nav className="bg-[#354c41] h-[60px]">
-        {/* Mobile */}
-        <div className="flex xl:hidden items-center justify-between h-full px-5">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <Link href="/"><img src="/logo.svg" alt="Block Sports" style={{ height: "25.6px", width: "73px" }} /></Link>
-          <MobileNav />
-        </div>
-        {/* Desktop */}
-        <div className="hidden xl:block relative h-full overflow-hidden">
-          <div className="absolute top-1/2 -translate-y-1/2 left-[14%]">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <Link href="/"><img src="/logo.svg" alt="Block Sports" style={{ height: "25.6px", width: "73px" }} /></Link>
-          </div>
-          <div className="absolute top-[20px] left-[50.7%] flex gap-[40px] items-center">
-            <Link href="/" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Home</Link>
-            {isBoxing ? (
-              <span className="text-white text-[16px] font-bold font-sans leading-[24px]">Boxing schedule</span>
-            ) : (
-              <Link href="/schedule?type=boxing" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Boxing schedule</Link>
-            )}
-            {!isBoxing ? (
-              <span className="text-white text-[16px] font-bold font-sans leading-[24px]">Strenght schedule</span>
-            ) : (
-              <Link href="/schedule?type=strength" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Strenght schedule</Link>
-            )}
-            <Link href="/membership" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Membership/shop</Link>
-            <Link href="/info" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Info</Link>
-          </div>
-        </div>
-      </nav>
+      <Header />
 
       {/* ── CONTENT ── */}
       <main className="px-5 xl:px-[14%] pt-10 xl:pt-[61px] pb-16 xl:pb-[100px]">
