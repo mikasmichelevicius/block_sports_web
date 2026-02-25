@@ -12,40 +12,44 @@ export default function Home() {
       </Suspense>
 
       {/* ── MOBILE LAYOUT (up to 768px) ── */}
-      <div className="md:hidden">
-        {/* Photo collage + coral peek */}
-        <div className="relative mt-4 overflow-hidden mx-auto" style={{ height: "340px", maxWidth: "400px" }}>
-          <div
-            className="absolute inset-0 rounded-[20px] overflow-hidden bg-white"
-          >
-            <div className="absolute" style={{ left: "-148px", top: "-134px", width: "473px", height: "315px" }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/gym-boxing.jpg" alt="Boxing ring" className="absolute inset-0 w-full h-full object-cover" />
+      <div className="md:hidden overflow-x-hidden">
+        <div className="relative px-4 pt-4">
+          <div className="relative">
+            {/* Photo collage — same layout as desktop, scales via aspect-ratio */}
+            <div
+              className="relative rounded-[20px] overflow-hidden bg-white"
+              style={{ aspectRatio: "635/671" }}
+            >
+              <div className="absolute" style={{ left: "-46.6%", top: "-39.8%", width: "148.8%", height: "93.9%" }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/gym-boxing.jpg" alt="Boxing ring" className="absolute inset-0 w-full h-full object-cover" />
+              </div>
+              <div className="absolute overflow-hidden" style={{ left: "-20.6%", top: "54.1%", width: "134.3%", height: "61.4%" }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/gym-weights.jpg"
+                  alt="Weights area"
+                  className="absolute max-w-none"
+                  style={{ height: "138.11%", left: "-0.04%", top: "-38.11%", width: "100.08%" }}
+                />
+              </div>
+              <div className="absolute" style={{ left: "49.1%", top: "-18%", width: "50.9%", height: "72.1%" }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/gym-bag.jpg" alt="Punching bag" className="absolute inset-0 w-full h-full object-cover" />
+              </div>
+              <RevealOverlay />
             </div>
-            <div className="absolute overflow-hidden" style={{ left: "-66px", top: "181px", width: "427px", height: "207px" }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/gym-weights.jpg"
-                alt="Weights area"
-                className="absolute max-w-none"
-                style={{ height: "138.11%", left: "-0.04%", top: "-38.11%", width: "100.08%" }}
-              />
-            </div>
-            <div className="absolute" style={{ left: "156px", top: "-61px", width: "162px", height: "242px" }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/gym-bag.jpg" alt="Punching bag" className="absolute inset-0 w-full h-full object-cover" />
-            </div>
-            <RevealOverlay />
+            {/* Coral ribbon — anchored to collage height, peeks from right */}
+            <div
+              className="absolute bg-[#d36560] rounded-l-[20px] top-0 bottom-0"
+              style={{ left: "calc(100% + 8px)", width: "200px" }}
+              aria-hidden="true"
+            />
           </div>
-          {/* Coral panel peeking */}
-          <div
-            className="absolute top-0 bg-[#d36560] rounded-[20px]"
-            style={{ right: "-180px", width: "200px", height: "340px" }}
-          />
         </div>
 
         {/* Content */}
-        <SlideIn className="px-5 mt-14 flex flex-col gap-8">
+        <SlideIn className="px-4 mt-8 flex flex-col gap-8" from="translateX(-8%)">
           <h1 className="font-heading font-black text-[44px] text-[#354c41] leading-[1.2] m-0">
             Performance
             <br />
@@ -81,7 +85,7 @@ export default function Home() {
         </SlideIn>
 
         {/* Footer info */}
-        <div className="flex flex-col items-center gap-[28px] text-[#354c41] text-[16px] font-sans mt-12 pb-12">
+        <div className="flex flex-col items-center gap-[28px] text-[#354c41] text-[16px] font-sans mt-12 pb-12 px-5">
           <p className="font-bold leading-[24px] m-0">Boxing · Conditioning · Recovery</p>
           <a
             href="https://maps.app.goo.gl/yQWmykY26Yv5tQY98"

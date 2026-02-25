@@ -62,7 +62,7 @@ export default function RevealOverlay({
     position: "absolute",
     left: 0,
     right: 0,
-    height: "55%",
+    height: "51%",
     transition: ready
       ? `transform ${duration}ms ease`
       : "none",
@@ -90,7 +90,7 @@ export default function RevealOverlay({
         style={{
           ...panelBase,
           top: 0,
-          background: `linear-gradient(to bottom, ${color} 70%, transparent)`,
+          background: `linear-gradient(to bottom, ${color} 96%, transparent)`,
           transform: ready ? "translateY(-100%)" : "translateY(0)",
         }}
       />
@@ -99,7 +99,7 @@ export default function RevealOverlay({
         style={{
           ...panelBase,
           bottom: 0,
-          background: `linear-gradient(to top, ${color} 70%, transparent)`,
+          background: `linear-gradient(to top, ${color} 96%, transparent)`,
           transform: ready ? "translateY(100%)" : "translateY(0)",
         }}
       />
