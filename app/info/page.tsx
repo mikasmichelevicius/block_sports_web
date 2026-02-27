@@ -22,12 +22,12 @@ export default function InfoPage() {
               <div className="col-12 col-xl-5 mb-8 mb-xl-0">
                 <p className="font-sans font-bold text-[20px] leading-[24px] mb-[13px] mt-0">Opening times</p>
                 <ul className="font-sans font-medium text-[13px] leading-[20px] xl:text-[16px] xl:leading-[24px] list-disc m-0 pl-[24px]">
-                  <li>Monday: 07:00 → 12:00, 13:00 → 20:00</li>
-                  <li>Tuesday: 07:00 → 12:00, 13:00 → 20:00</li>
-                  <li>Wednesday: 07:00 → 12:00, 13:00 → 20:00</li>
-                  <li>Thursday: 07:00 → 12:00, 13:00 → 20:00</li>
-                  <li>Friday: 07:00 → 12:00, 13:00 → 20:00</li>
-                  <li>Saturday: 11:00 → 12:00,</li>
+                  <li>Monday: 07:00 → 20:00</li>
+                  <li>Tuesday: 07:00 → 20:00</li>
+                  <li>Wednesday: 07:00 → 20:00</li>
+                  <li>Thursday: 07:00 → 20:00</li>
+                  <li>Friday: 07:00 → 20:00</li>
+                  <li>Saturday: 11:00 → 14:00</li>
                   <li>Sunday: Closed</li>
                 </ul>
               </div>
@@ -54,18 +54,18 @@ export default function InfoPage() {
                   <div>
                     <p className="font-sans font-bold text-[20px] leading-[24px] mb-[13px] mt-0">Boxing</p>
                     <ul className="font-sans font-medium text-[13px] leading-[20px] xl:text-[16px] xl:leading-[24px] list-disc m-0 pl-[24px]">
-                      <li>All adult group boxing trainings - €95</li>
-                      <li>All youth boxing + strength trainings - €95</li>
-                      <li>Adult boxing &amp; strength unlimited - €200</li>
-                      <li>Single group training - €20</li>
+                      <li>All adult group boxing trainings - €97</li>
+                      <li>All youth boxing + strength trainings - €97</li>
+                      <li>Adult boxing &amp; strength unlimited - €204</li>
+                      <li>Single group training - €21</li>
                     </ul>
                   </div>
                   <div>
                     <p className="font-sans font-bold text-[20px] leading-[24px] mb-[13px] mt-0">Strength</p>
                     <ul className="font-sans font-medium text-[13px] leading-[20px] xl:text-[16px] xl:leading-[24px] list-disc m-0 pl-[24px]">
-                      <li>Group strength 2 times per week - €120</li>
-                      <li>Group strength unlimited + special offers - €160</li>
-                      <li>Single group training - €20</li>
+                      <li>Group strength 2 times per week - €123</li>
+                      <li>Group strength unlimited + special offers - €163</li>
+                      <li>Single group training - €21</li>
                     </ul>
                   </div>
                 </div>
@@ -76,8 +76,9 @@ export default function InfoPage() {
                   <div>
                     <p className="font-sans font-bold text-[20px] leading-[24px] mb-[13px] mt-0">Special offers</p>
                     <ul className="font-sans font-medium text-[13px] leading-[20px] xl:text-[16px] xl:leading-[24px] list-disc m-0 pl-[24px]">
-                      <li>Yoga - €20 (free for strength unlimited)</li>
-                      <li>Performance testing events (Hawking plates, Vitruve)- €50 (free for strength unlimited)</li>
+                      <li>Yoga - €21 (free for strength unlimited)</li>
+                      <li>Individual performance testing and profiling (Hawkin Dynamics force plates, Vitruve) - €120</li>
+                      <li>Free performance testing events for Strength Unlimited subscribers</li>
                     </ul>
                   </div>
                   <div>
