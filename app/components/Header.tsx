@@ -15,10 +15,11 @@ interface NavItem {
 
 const NAV_ITEMS: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "Boxing schedule", href: "/schedule?type=boxing" },
-  { label: "Strenght schedule", href: "/schedule?type=strength" },
-  { label: "Membership/shop", href: "/membership" },
+  { label: "Boxing Schedule", href: "/schedule?type=boxing" },
+  { label: "Gym Schedule", href: "/schedule?type=strength" },
+  { label: "Membership/Shop", href: "/membership" },
   { label: "Info", href: "/info" },
+  { label: "User Area", href: "/user-area" },
 ];
 
 export default function Header() {

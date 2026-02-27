@@ -66,21 +66,21 @@ export default function MobileNav() {
               className="text-white text-[5.5vw] font-normal font-sans leading-normal no-underline"
               onClick={() => setOpen(false)}
             >
-              Boxing schedule
+              Boxing Schedule
             </Link>
             <Link
               href="/schedule?type=strength"
               className="text-white text-[5.5vw] font-normal font-sans leading-normal no-underline"
               onClick={() => setOpen(false)}
             >
-              Strenght schedule
+              Gym Schedule
             </Link>
             <Link
               href="/membership"
               className="text-white text-[5.5vw] font-normal font-sans leading-normal no-underline"
               onClick={() => setOpen(false)}
             >
-              Membership/shop
+              Membership/Shop
             </Link>
             <Link
               href="/info"
@@ -88,6 +88,13 @@ export default function MobileNav() {
               onClick={() => setOpen(false)}
             >
               Info
+            </Link>
+            <Link
+              href="/user-area"
+              className="text-white text-[5.5vw] font-normal font-sans leading-normal no-underline"
+              onClick={() => setOpen(false)}
+            >
+              User Area
             </Link>
           </div>
         </div>

@@ -153,7 +153,7 @@ export default function InfoPage() {
               <span className="font-bold underline">Vytenio g. 52, Vilnius, Lithuania</span>
             </a>
             <p className="font-bold leading-[24px] m-0 shrink-0">+37062692132</p>
-            <Link href="/membership" className="font-bold leading-[24px] m-0 underline shrink-0 no-underline" style={{ color: "#354c41" }}>Membership/shop</Link>
+            <Link href="/membership" className="font-bold leading-[24px] m-0 underline shrink-0 no-underline" style={{ color: "#354c41" }}>Membership/Shop</Link>
           </div>
         </div>
       </div>

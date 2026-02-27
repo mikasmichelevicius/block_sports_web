@@ -1,10 +1,9 @@
 import { Suspense } from "react";
 import Link from "next/link";
 import Header from "@/app/components/Header";
-import MembershipsWidget from "@/app/components/MembershipsWidget";
-import PassesWidget from "@/app/components/PassesWidget";
+import UserAreaWidget from "@/app/components/UserAreaWidget";
 
-export default function MembershipPage() {
+export default function UserAreaPage() {
   return (
     <div className="bg-[#fefcf8]">
 
@@ -13,39 +12,17 @@ export default function MembershipPage() {
       </Suspense>
 
       <main className="pt-10 xl:pt-[61px] pb-16 xl:pb-[100px]">
-        <div className="container text-[#354c41]">
-          <div className="flex flex-col gap-16 xl:gap-[80px]">
-
-            {/* Memberships */}
-            <section>
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
               <h1
-                className="font-heading font-black leading-normal m-0 mb-6 xl:mb-[24px]"
+                className="font-heading font-black text-[#354c41] leading-normal m-0 mb-8 xl:mb-[40px]"
                 style={{ fontSize: "clamp(40px, 3.9vw, 70px)" }}
               >
-                Memberships
+                User Area
               </h1>
-              <div className="row">
-                <div className="col-12">
-                  <MembershipsWidget />
-                </div>
-              </div>
-            </section>
-
-            {/* Passes */}
-            <section>
-              <h2
-                className="font-heading font-black leading-normal m-0 mb-6 xl:mb-[24px]"
-                style={{ fontSize: "clamp(40px, 3.9vw, 70px)" }}
-              >
-                Passes
-              </h2>
-              <div className="row">
-                <div className="col-12">
-                  <PassesWidget />
-                </div>
-              </div>
-            </section>
-
+              <UserAreaWidget />
+            </div>
           </div>
         </div>
       </main>
