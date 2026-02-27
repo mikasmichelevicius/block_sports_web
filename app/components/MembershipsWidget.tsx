@@ -46,5 +46,9 @@ export default function MembershipsWidget() {
     };
   }, []);
 
-  return <div id="bsport-widget-468122" />;
+  return (
+    <div className="overflow-x-auto">
+      <div id="bsport-widget-468122" />
+    </div>
+  );
 }

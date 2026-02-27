@@ -53,5 +53,9 @@ export default function PassesWidget() {
     };
   }, []);
 
-  return <div id="bsport-widget-232702" />;
+  return (
+    <div className="overflow-x-auto">
+      <div id="bsport-widget-232702" />
+    </div>
+  );
 }

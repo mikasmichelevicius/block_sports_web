@@ -10,23 +10,17 @@ export default function InfoPage() {
         <Header />
       </Suspense>
 
-      {/* ── MAIN CONTENT ── */}
-      <main className="px-5 xl:px-[14%] pt-10 xl:pt-[61px] pb-16 xl:pb-[100px]">
-        <div className="flex flex-col gap-16 xl:gap-[100px] text-[#354c41]">
+      <main className="pt-10 xl:pt-[61px] pb-16 xl:pb-[100px]">
+        <div className="container text-[#354c41]">
 
           {/* ── SECTION 1: Information ── */}
-          <section className="flex flex-col gap-6 xl:gap-[24px]">
-            <h1
-              className="font-heading font-black text-[#354c41] leading-normal m-0 text-[36px] xl:[font-size:clamp(40px,3.9vw,70px)]"
-            >
+          <section className="mb-16 xl:mb-[100px]">
+            <h1 className="font-heading font-black leading-normal m-0 mb-6 xl:mb-[24px] text-[36px] xl:[font-size:clamp(40px,3.9vw,70px)]">
               Information
             </h1>
-
-            <div className="flex flex-col xl:flex-row gap-8 xl:gap-[87px] xl:items-start">
-
-              {/* Opening times */}
-              <div className="flex flex-col gap-[13px] xl:w-[371px] shrink-0">
-                <p className="font-sans font-bold text-[20px] leading-[24px] m-0">Opening times</p>
+            <div className="row gx-5">
+              <div className="col-12 col-xl-5 mb-8 mb-xl-0">
+                <p className="font-sans font-bold text-[20px] leading-[24px] mb-[13px] mt-0">Opening times</p>
                 <ul className="font-sans font-medium text-[13px] leading-[20px] xl:text-[16px] xl:leading-[24px] list-disc m-0 pl-[24px]">
                   <li>Monday: 07:00 → 12:00, 13:00 → 20:00</li>
                   <li>Tuesday: 07:00 → 12:00, 13:00 → 20:00</li>
@@ -37,92 +31,76 @@ export default function InfoPage() {
                   <li>Sunday: Closed</li>
                 </ul>
               </div>
-
-              {/* Contact */}
-              <div className="flex flex-col gap-[13px]">
-                <p className="font-sans font-bold text-[20px] leading-[24px] m-0">Contact</p>
+              <div className="col-12 col-xl-7">
+                <p className="font-sans font-bold text-[20px] leading-[24px] mb-[13px] mt-0">Contact</p>
                 <div className="font-sans font-medium text-[13px] leading-[20px] xl:text-[16px] xl:leading-[24px]">
                   <p className="mb-0">info@blocksports.lt</p>
                   <p className="mb-0">+37062692132</p>
                   <p className="m-0">Vytenio g. 52, Vilnius, Lithuania</p>
                 </div>
               </div>
-
             </div>
           </section>
 
           {/* ── SECTION 2: Pricing ── */}
-          <section className="flex flex-col gap-6 xl:gap-[24px]">
-            <h2
-              className="font-heading font-black text-[#354c41] leading-normal m-0 text-[36px] xl:[font-size:clamp(40px,3.9vw,70px)]"
-            >
+          <section className="mb-16 xl:mb-[100px]">
+            <h2 className="font-heading font-black leading-normal m-0 mb-6 xl:mb-[24px] text-[36px] xl:[font-size:clamp(40px,3.9vw,70px)]">
               Pricing
             </h2>
-
-            <div className="flex flex-col xl:flex-row gap-8 xl:gap-[24px] xl:items-start">
-
-              {/* Left: Boxing + Strength stacked */}
-              <div className="flex flex-col gap-8 xl:gap-[24px] shrink-0">
-                {/* Boxing */}
-                <div className="flex flex-col gap-[13px] xl:w-[371px]">
-                  <p className="font-sans font-bold text-[20px] leading-[24px] m-0">Boxing</p>
-                  <ul className="font-sans font-medium text-[13px] leading-[20px] xl:text-[16px] xl:leading-[24px] list-disc m-0 pl-[24px]">
-                    <li>All adult group boxing trainings - €95</li>
-                    <li>All youth boxing + strength trainings - €95</li>
-                    <li>Adult boxing &amp; strength unlimited - €200</li>
-                    <li>Single group training - €20</li>
-                  </ul>
-                </div>
-
-                {/* Strength */}
-                <div className="flex flex-col gap-[13px] xl:w-[406px]">
-                  <p className="font-sans font-bold text-[20px] leading-[24px] m-0">Strength</p>
-                  <ul className="font-sans font-medium text-[13px] leading-[20px] xl:text-[16px] xl:leading-[24px] list-disc m-0 pl-[24px]">
-                    <li>Group strength 2 times per week - €120</li>
-                    <li>Group strength unlimited + special offers - €160</li>
-                    <li>Single group training - €20</li>
-                  </ul>
+            <div className="row gx-4">
+              {/* Left: Boxing + Strength */}
+              <div className="col-12 col-xl-6 mb-8 mb-xl-0">
+                <div className="flex flex-col gap-8 xl:gap-[24px]">
+                  <div>
+                    <p className="font-sans font-bold text-[20px] leading-[24px] mb-[13px] mt-0">Boxing</p>
+                    <ul className="font-sans font-medium text-[13px] leading-[20px] xl:text-[16px] xl:leading-[24px] list-disc m-0 pl-[24px]">
+                      <li>All adult group boxing trainings - €95</li>
+                      <li>All youth boxing + strength trainings - €95</li>
+                      <li>Adult boxing &amp; strength unlimited - €200</li>
+                      <li>Single group training - €20</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-sans font-bold text-[20px] leading-[24px] mb-[13px] mt-0">Strength</p>
+                    <ul className="font-sans font-medium text-[13px] leading-[20px] xl:text-[16px] xl:leading-[24px] list-disc m-0 pl-[24px]">
+                      <li>Group strength 2 times per week - €120</li>
+                      <li>Group strength unlimited + special offers - €160</li>
+                      <li>Single group training - €20</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-
-              {/* Right: Special offers + Other stacked */}
-              <div className="flex flex-col gap-8 xl:gap-[24px] shrink-0">
-                {/* Special offers */}
-                <div className="flex flex-col gap-[13px]">
-                  <p className="font-sans font-bold text-[20px] leading-[24px] m-0">Special offers</p>
-                  <ul className="font-sans font-medium text-[13px] leading-[20px] xl:text-[16px] xl:leading-[24px] list-disc m-0 pl-[24px] xl:w-[409px]">
-                    <li>Yoga - €20 (free for strength unlimited)</li>
-                    <li>Performance testing events (Hawking plates, Vitruve)- €50 (free for strength unlimited)</li>
-                  </ul>
-                </div>
-
-                {/* Other */}
-                <div className="flex flex-col gap-[13px]">
-                  <p className="font-sans font-bold text-[20px] leading-[24px] m-0">Other</p>
-                  <ul className="font-sans font-medium text-[13px] leading-[20px] xl:text-[16px] xl:leading-[24px] list-disc m-0 pl-[24px] xl:w-[380px]">
-                    <li>Boxing youth family deal (two or more kids) - €85/per kid</li>
-                    <li>Community events - free for members.</li>
-                    <li>Individual trainings - contact for pricing</li>
-                  </ul>
+              {/* Right: Special offers + Other */}
+              <div className="col-12 col-xl-6">
+                <div className="flex flex-col gap-8 xl:gap-[24px]">
+                  <div>
+                    <p className="font-sans font-bold text-[20px] leading-[24px] mb-[13px] mt-0">Special offers</p>
+                    <ul className="font-sans font-medium text-[13px] leading-[20px] xl:text-[16px] xl:leading-[24px] list-disc m-0 pl-[24px]">
+                      <li>Yoga - €20 (free for strength unlimited)</li>
+                      <li>Performance testing events (Hawking plates, Vitruve)- €50 (free for strength unlimited)</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-sans font-bold text-[20px] leading-[24px] mb-[13px] mt-0">Other</p>
+                    <ul className="font-sans font-medium text-[13px] leading-[20px] xl:text-[16px] xl:leading-[24px] list-disc m-0 pl-[24px]">
+                      <li>Boxing youth family deal (two or more kids) - €85/per kid</li>
+                      <li>Community events - free for members.</li>
+                      <li>Individual trainings - contact for pricing</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-
             </div>
           </section>
 
           {/* ── SECTION 3: Other information ── */}
-          <section className="flex flex-col gap-6 xl:gap-[24px]">
-            <h2
-              className="font-heading font-black text-[#354c41] leading-normal m-0 text-[36px] xl:[font-size:clamp(40px,3.9vw,70px)]"
-            >
+          <section>
+            <h2 className="font-heading font-black leading-normal m-0 mb-6 xl:mb-[24px] text-[36px] xl:[font-size:clamp(40px,3.9vw,70px)]">
               Other information
             </h2>
-
-            <div className="flex flex-col xl:flex-row gap-8 xl:gap-[87px] xl:items-start">
-
-              {/* Termination & Pause */}
-              <div className="flex flex-col gap-[13px] w-full xl:w-[371px] shrink-0">
-                <p className="font-sans font-bold text-[20px] leading-[24px] m-0">
+            <div className="row gx-5">
+              <div className="col-12 col-xl-5 mb-8 mb-xl-0">
+                <p className="font-sans font-bold text-[20px] leading-[24px] mb-[13px] mt-0">
                   Termination &amp; Pause
                 </p>
                 <div className="font-sans font-medium text-[13px] leading-[20px] xl:text-[16px] xl:leading-[24px]">
@@ -143,10 +121,8 @@ export default function InfoPage() {
                   </ul>
                 </div>
               </div>
-
-              {/* Location rent */}
-              <div className="flex flex-col gap-[13px] w-full">
-                <p className="font-sans font-bold text-[20px] leading-[24px] m-0">Location rent</p>
+              <div className="col-12 col-xl-7">
+                <p className="font-sans font-bold text-[20px] leading-[24px] mb-[13px] mt-0">Location rent</p>
                 <div className="font-sans font-medium text-[13px] leading-[20px] xl:text-[16px] xl:leading-[24px]">
                   <p className="mb-0">We rent out one of our spaces for:</p>
                   <ul className="list-disc pl-[24px] m-0">
@@ -158,7 +134,6 @@ export default function InfoPage() {
                   <p className="mt-[20px] xl:mt-[24px] m-0">Contact us for more information.</p>
                 </div>
               </div>
-
             </div>
           </section>
 
@@ -166,21 +141,21 @@ export default function InfoPage() {
       </main>
 
       {/* ── FOOTER ── */}
-      <div className="text-[#354c41] text-[16px] font-sans px-5 xl:px-[14%]
-        flex flex-col items-center text-center gap-4 py-8
-        xl:flex-row xl:justify-between xl:py-0 xl:gap-0 xl:text-left"
-        style={{ minHeight: "63px" }}
-      >
-        <p className="font-bold leading-[24px] m-0 shrink-0">Boxing · Conditioning · Recovery</p>
-        <a
-          href="https://maps.app.goo.gl/yQWmykY26Yv5tQY98"
-          className="leading-[24px] shrink-0 no-underline text-center"
-          style={{ color: "#354c41" }}
-        >
-          <span className="font-bold underline">Vytenio g. 52, Vilnius, Lithuania</span>
-        </a>
-        <p className="font-bold leading-[24px] m-0 shrink-0">+37062692132</p>
-        <Link href="/membership" className="font-bold leading-[24px] m-0 underline shrink-0 cursor-pointer no-underline" style={{ color: "#354c41" }}>Membership/shop</Link>
+      <div className="text-[#354c41] text-[16px] font-sans py-8 xl:py-0" style={{ minHeight: "63px" }}>
+        <div className="container">
+          <div className="flex flex-col items-center text-center gap-4 xl:flex-row xl:justify-between xl:items-center xl:text-left xl:h-[63px]">
+            <p className="font-bold leading-[24px] m-0 shrink-0">Boxing · Conditioning · Recovery</p>
+            <a
+              href="https://maps.app.goo.gl/yQWmykY26Yv5tQY98"
+              className="leading-[24px] shrink-0 no-underline text-center"
+              style={{ color: "#354c41" }}
+            >
+              <span className="font-bold underline">Vytenio g. 52, Vilnius, Lithuania</span>
+            </a>
+            <p className="font-bold leading-[24px] m-0 shrink-0">+37062692132</p>
+            <Link href="/membership" className="font-bold leading-[24px] m-0 underline shrink-0 no-underline" style={{ color: "#354c41" }}>Membership/shop</Link>
+          </div>
+        </div>
       </div>
 
     </div>

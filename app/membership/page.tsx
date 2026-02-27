@@ -1,5 +1,6 @@
+import { Suspense } from "react";
 import Link from "next/link";
-import MobileNav from "@/app/components/MobileNav";
+import Header from "@/app/components/Header";
 import MembershipsWidget from "@/app/components/MembershipsWidget";
 import PassesWidget from "@/app/components/PassesWidget";
 
@@ -7,75 +8,64 @@ export default function MembershipPage() {
   return (
     <div className="bg-[#fefcf8]">
 
-      {/* ── NAVBAR ── */}
-      <nav className="bg-[#354c41] h-[60px]">
-        {/* Mobile */}
-        <div className="flex xl:hidden items-center justify-between h-full px-5">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <Link href="/"><img src="/logo.svg" alt="Block Sports" style={{ height: "25.6px", width: "73px" }} /></Link>
-          <MobileNav />
-        </div>
-        {/* Desktop */}
-        <div className="hidden xl:block relative h-full overflow-hidden">
-          <div className="absolute top-1/2 -translate-y-1/2 left-[14%]">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <Link href="/"><img src="/logo.svg" alt="Block Sports" style={{ height: "25.6px", width: "73px" }} /></Link>
+      <Suspense>
+        <Header />
+      </Suspense>
+
+      <main className="pt-10 xl:pt-[61px] pb-16 xl:pb-[100px]">
+        <div className="container text-[#354c41]">
+          <div className="flex flex-col gap-16 xl:gap-[80px]">
+
+            {/* Memberships */}
+            <section>
+              <h1
+                className="font-heading font-black leading-normal m-0 mb-6 xl:mb-[24px]"
+                style={{ fontSize: "clamp(40px, 3.9vw, 70px)" }}
+              >
+                Memberships
+              </h1>
+              <div className="row">
+                <div className="col-12">
+                  <MembershipsWidget />
+                </div>
+              </div>
+            </section>
+
+            {/* Passes */}
+            <section>
+              <h2
+                className="font-heading font-black leading-normal m-0 mb-6 xl:mb-[24px]"
+                style={{ fontSize: "clamp(40px, 3.9vw, 70px)" }}
+              >
+                Passes
+              </h2>
+              <div className="row">
+                <div className="col-12">
+                  <PassesWidget />
+                </div>
+              </div>
+            </section>
+
           </div>
-          <div className="absolute top-[20px] left-[50.7%] flex gap-[40px] items-center">
-            <Link href="/" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Home</Link>
-            <Link href="/schedule?type=boxing" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Boxing schedule</Link>
-            <Link href="/schedule?type=strength" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Strenght schedule</Link>
-            <span className="text-white text-[16px] font-bold font-sans leading-[24px]">Membership/shop</span>
-            <Link href="/info" className="text-white text-[16px] font-normal font-sans leading-[24px] no-underline">Info</Link>
-          </div>
-        </div>
-      </nav>
-
-      {/* ── MAIN CONTENT ── */}
-      <main className="px-5 xl:px-[14%] pt-10 xl:pt-[61px] pb-16 xl:pb-[100px]">
-        <div className="flex flex-col gap-16 xl:gap-[80px] text-[#354c41]">
-
-          {/* Memberships */}
-          <section className="flex flex-col gap-6 xl:gap-[24px]">
-            <h1
-              className="font-heading font-black text-[#354c41] leading-normal m-0"
-              style={{ fontSize: "clamp(40px, 3.9vw, 70px)" }}
-            >
-              Memberships
-            </h1>
-            <MembershipsWidget />
-          </section>
-
-          {/* Passes */}
-          <section className="flex flex-col gap-6 xl:gap-[24px]">
-            <h2
-              className="font-heading font-black text-[#354c41] leading-normal m-0"
-              style={{ fontSize: "clamp(40px, 3.9vw, 70px)" }}
-            >
-              Passes
-            </h2>
-            <PassesWidget />
-          </section>
-
         </div>
       </main>
 
       {/* ── FOOTER ── */}
-      <div className="text-[#354c41] text-[16px] font-sans px-5 xl:px-[14%]
-        flex flex-col items-center gap-4 py-8
-        xl:flex-row xl:justify-between xl:py-0 xl:gap-0"
-        style={{ minHeight: "63px" }}
-      >
-        <p className="font-bold leading-[24px] m-0 shrink-0">Boxing · Conditioning · Recovery</p>
-        <a
-          href="https://maps.app.goo.gl/yQWmykY26Yv5tQY98"
-          className="leading-[24px] shrink-0 no-underline text-center"
-          style={{ color: "#354c41" }}
-        >
-          <span className="font-bold underline">Vytenio g. 52, Vilnius, Lithuania</span>
-        </a>
-        <p className="font-bold leading-[24px] m-0 shrink-0">+37062692132</p>
-        <p className="font-bold leading-[24px] m-0 underline shrink-0 cursor-pointer">Membership/shop</p>
+      <div className="text-[#354c41] text-[16px] font-sans py-8 xl:py-0" style={{ minHeight: "63px" }}>
+        <div className="container">
+          <div className="flex flex-col items-center gap-4 xl:flex-row xl:justify-between xl:items-center xl:h-[63px]">
+            <p className="font-bold leading-[24px] m-0 shrink-0">Boxing · Conditioning · Recovery</p>
+            <a
+              href="https://maps.app.goo.gl/yQWmykY26Yv5tQY98"
+              className="leading-[24px] shrink-0 no-underline text-center"
+              style={{ color: "#354c41" }}
+            >
+              <span className="font-bold underline">Vytenio g. 52, Vilnius, Lithuania</span>
+            </a>
+            <p className="font-bold leading-[24px] m-0 shrink-0">+37062692132</p>
+            <Link href="/membership" className="font-bold leading-[24px] m-0 underline shrink-0 no-underline" style={{ color: "#354c41" }}>Membership/shop</Link>
+          </div>
+        </div>
       </div>
 
     </div>
