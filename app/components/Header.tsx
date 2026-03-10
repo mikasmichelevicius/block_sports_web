@@ -17,9 +17,10 @@ const NAV_ITEMS: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "Boxing Schedule", href: "/schedule?type=boxing" },
   { label: "Gym Schedule", href: "/schedule?type=strength" },
-  { label: "Membership/Shop", href: "/membership" },
+  { label: "Subscription", href: "https://backoffice.bsport.io/m/Block%20Sports/5529/subscription/?tabSelected=2&index=2" },
+  { label: "Passes", href: "https://backoffice.bsport.io/m/Block%20Sports/5529/pass/?tabSelected=3&index=3" },
   { label: "Info", href: "/info" },
-  { label: "User Area", href: "/user-area" },
+  { label: "User Area", href: "https://backoffice.bsport.io/c/5529/subscription/" },
 ];
 
 export default function Header() {

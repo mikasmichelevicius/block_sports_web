@@ -76,11 +76,18 @@ export default function MobileNav() {
               Gym Schedule
             </Link>
             <Link
-              href="/membership"
+              href="https://backoffice.bsport.io/m/Block%20Sports/5529/subscription/?tabSelected=2&index=2"
               className="text-white text-[5.5vw] font-normal font-sans leading-normal no-underline"
               onClick={() => setOpen(false)}
             >
-              Membership/Shop
+              Subscription
+            </Link>
+            <Link
+              href="https://backoffice.bsport.io/m/Block%20Sports/5529/pass/?tabSelected=3&index=3"
+              className="text-white text-[5.5vw] font-normal font-sans leading-normal no-underline"
+              onClick={() => setOpen(false)}
+            >
+              Passes
             </Link>
             <Link
               href="/info"
@@ -90,7 +97,7 @@ export default function MobileNav() {
               Info
             </Link>
             <Link
-              href="/user-area"
+              href="https://backoffice.bsport.io/c/5529/subscription/"
               className="text-white text-[5.5vw] font-normal font-sans leading-normal no-underline"
               onClick={() => setOpen(false)}
             >
