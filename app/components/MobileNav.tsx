@@ -53,7 +53,7 @@ export default function MobileNav() {
           </div>
 
           {/* Nav links */}
-          <div className="flex flex-col items-center gap-[16vw] pt-[12vw]">
+          <div className="flex-1 overflow-y-auto flex flex-col items-center gap-[32px] pt-[10vw] pb-8" style={{ paddingBottom: "max(32px, env(safe-area-inset-bottom))" }}>
             <Link
               href="/"
               className="text-white text-[5.5vw] font-bold font-sans leading-normal no-underline"
