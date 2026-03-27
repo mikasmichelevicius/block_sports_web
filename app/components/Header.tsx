@@ -15,9 +15,10 @@ interface NavItem {
 
 const NAV_ITEMS: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "Boxing Schedule", href: "/schedule?type=boxing" },
-  { label: "Gym Schedule", href: "/schedule?type=strength" },
-  { label: "Subscription", href: "https://backoffice.bsport.io/m/Block%20Sports/5529/subscription/?tabSelected=2&index=2" },
+  { label: "Boxing Calendar", href: "/schedule?type=boxing" },
+  { label: "Strength Calendar", href: "/schedule?type=strength" },
+  { label: "Massages", href: "https://backoffice.bsport.io/m/Block%20Sports/5529/private-service/?tabSelected=2&index=2" },
+  { label: "Subscriptions", href: "https://backoffice.bsport.io/m/Block%20Sports/5529/subscription/?tabSelected=2&index=2" },
   { label: "Passes", href: "https://backoffice.bsport.io/m/Block%20Sports/5529/pass/?tabSelected=3&index=3" },
   { label: "Info", href: "/info" },
   { label: "User Area", href: "https://backoffice.bsport.io/c/5529/subscription/" },
@@ -37,9 +38,9 @@ export default function Header() {
   };
 
   return (
-    <nav className="bg-[#354c41] h-[60px]">
+    <nav className="bg-[#354c41]" style={{ paddingTop: "env(safe-area-inset-top)" }}>
       {/* Mobile */}
-      <div className="flex md:hidden items-center justify-between h-full px-5">
+      <div className="flex md:hidden items-center justify-between h-[60px] px-5">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <Link href="/">
           <img src="/logo.svg" alt="Block Sports" style={{ height: "25.6px", width: "73px" }} />
@@ -47,7 +48,7 @@ export default function Header() {
         <MobileNav />
       </div>
       {/* Desktop */}
-      <div className="hidden md:flex relative h-full items-center justify-between px-[5%] lg:px-[14%]">
+      <div className="hidden md:flex relative h-[60px] items-center justify-between px-[5%] lg:px-[14%]">
         <div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <Link href="/">

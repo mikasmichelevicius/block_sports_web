@@ -32,7 +32,7 @@ function ScheduleContent() {
                 className="font-heading font-black text-[#354c41] leading-normal m-0 mb-8 xl:mb-[40px]"
                 style={{ fontSize: "clamp(40px, 3.9vw, 70px)" }}
               >
-                {isBoxing ? "Boxing Schedule" : "Gym Schedule"}
+                {isBoxing ? "Boxing Calendar" : "Strength Calendar"}
               </h1>
               <div style={{ display: isBoxing ? "block" : "none" }}>
                 {mountedBoxing && <BoxingWidget />}

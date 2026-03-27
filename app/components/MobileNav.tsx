@@ -29,7 +29,7 @@ export default function MobileNav() {
 
       {/* Full-screen overlay */}
       {open && (
-        <div className="fixed inset-0 bg-[#354c41] z-50 flex flex-col">
+        <div className="fixed inset-0 bg-[#354c41] z-50 flex flex-col" style={{ paddingTop: "env(safe-area-inset-top)" }}>
           {/* Top bar — mirrors the collapsed nav */}
           <div className="flex items-center justify-between h-[60px] px-5 shrink-0">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -66,21 +66,28 @@ export default function MobileNav() {
               className="text-white text-[5.5vw] font-normal font-sans leading-normal no-underline"
               onClick={() => setOpen(false)}
             >
-              Boxing Schedule
+              Boxing Calendar
             </Link>
             <Link
               href="/schedule?type=strength"
               className="text-white text-[5.5vw] font-normal font-sans leading-normal no-underline"
               onClick={() => setOpen(false)}
             >
-              Gym Schedule
+              Strength Calendar
+            </Link>
+            <Link
+              href="https://backoffice.bsport.io/m/Block%20Sports/5529/private-service/?tabSelected=2&index=2"
+              className="text-white text-[5.5vw] font-normal font-sans leading-normal no-underline"
+              onClick={() => setOpen(false)}
+            >
+              Massages
             </Link>
             <Link
               href="https://backoffice.bsport.io/m/Block%20Sports/5529/subscription/?tabSelected=2&index=2"
               className="text-white text-[5.5vw] font-normal font-sans leading-normal no-underline"
               onClick={() => setOpen(false)}
             >
-              Subscription
+              Subscriptions
             </Link>
             <Link
               href="https://backoffice.bsport.io/m/Block%20Sports/5529/pass/?tabSelected=3&index=3"

@@ -77,6 +77,7 @@ export default function InfoPage() {
                     <p className="font-sans font-bold text-[20px] leading-[24px] mb-[13px] mt-0">Special offers</p>
                     <ul className="font-sans font-medium text-[13px] leading-[20px] xl:text-[16px] xl:leading-[24px] list-disc m-0 pl-[24px]">
                       <li>Yoga - €21 (free for strength unlimited)</li>
+                      <li>Individualized massages with a massage therapist - 45, 60 or 90min sessions with prices of €42, €52 and €63 respectively.</li>
                       <li>Individual performance testing and profiling (Hawkin Dynamics force plates, Vitruve) - €120</li>
                       <li>Free performance testing events for Strength Unlimited subscribers</li>
                     </ul>
