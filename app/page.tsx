@@ -3,6 +3,7 @@ import Link from "next/link";
 import RevealOverlay from "@/app/components/RevealGroup";
 import Header from "@/app/components/Header";
 import SlideIn from "@/app/components/SlideIn";
+import AppStoreBadge from "@/app/components/AppStoreBadge";
 
 export default function Home() {
   return (
@@ -79,8 +80,23 @@ export default function Home() {
               className="bg-[#d36560] flex items-center justify-center rounded-[6px] text-white text-[16px] font-medium font-sans leading-[24px] no-underline"
               style={{ width: "174px", height: "40px" }}
             >
-              Join us
+              Join us here
             </Link>
+          </div>
+
+          <div>
+            <p className="font-normal text-[#354c41] leading-tight m-0 mb-4" style={{ fontFamily: "var(--font-oswald)", fontSize: "34px" }}>
+              Or get our mobile app to sign up for classes
+            </p>
+            <div className="flex gap-3 items-center justify-center">
+              <a href="https://apps.apple.com/lt/app/block-sports-gym/id6761255231" target="_blank" rel="noopener noreferrer">
+                <AppStoreBadge />
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.bsport_618__5529&pcampaignid=web_share" target="_blank" rel="noopener noreferrer">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/google-play-badge.svg" alt="Get it on Google Play" style={{ height: "40px", width: "auto" }} />
+              </a>
+            </div>
           </div>
         </SlideIn>
 
@@ -104,9 +120,9 @@ export default function Home() {
         {/* Hero */}
         <div className="relative" style={{ paddingTop: "5vw", paddingBottom: "5.7vw" }}>
           <div className="container">
-            <div className="row gx-5 justify-center align-items-center relative">
+            <div className="row gx-5 justify-center align-items-stretch relative">
               {/* Col 1 — content (5/12) */}
-              <SlideIn className="col-md-6 col-xxl-5 d-flex flex-column justify-content-center">
+              <SlideIn className="col-md-6 col-xxl-5 d-flex flex-column justify-content-between">
                 <h1
                   className="font-heading font-black text-[#354c41] leading-[1.2] m-0"
                   style={{ fontSize: "clamp(36px, 3.9vw, 70px)" }}
@@ -118,7 +134,6 @@ export default function Home() {
 
                 <div
                   className="text-[#354c41] text-[clamp(13px,1.2vw,16px)] font-medium font-sans leading-[1.6]"
-                  style={{ marginTop: "2.2vw" }}
                 >
                   <p className="mb-3">
                     Block Sports, located in Naujamiestis inside the iconic Loftas quarter — a raw, industrial space in
@@ -139,17 +154,36 @@ export default function Home() {
                 <Link
                   href="/membership"
                   className="bg-[#d36560] inline-flex items-center justify-center rounded-[6px] text-white text-[16px] font-medium font-sans leading-[24px] no-underline self-start"
-                  style={{ marginTop: "1vw", width: "174px", height: "40px" }}
+                  style={{ width: "174px", height: "40px" }}
                 >
-                  Join us
+                  Join us here
                 </Link>
+
+                <div className="flex flex-col gap-3">
+                  <p
+                    className="font-normal text-[#354c41] leading-tight m-0"
+                    style={{ fontFamily: "var(--font-oswald)", fontSize: "clamp(28px, 2.8vw, 50px)" }}
+                  >
+                    Or get our mobile app to sign up for classes
+                  </p>
+                  <div className="flex gap-3 items-center">
+                    <a href="https://apps.apple.com/lt/app/block-sports-gym/id6761255231" target="_blank" rel="noopener noreferrer">
+                      <AppStoreBadge />
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.bsport_618__5529&pcampaignid=web_share" target="_blank" rel="noopener noreferrer">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src="/google-play-badge.svg" alt="Get it on Google Play" style={{ height: "40px", width: "auto" }} />
+                    </a>
+                  </div>
+                </div>
               </SlideIn>
 
               {/* Col 2 — photo collage (7/12) */}
               <div className="col-md-6 col-xxl-5 relative">
+                {/* Spacer drives column height via aspect-ratio; image fills absolutely */}
+                <div style={{ aspectRatio: "635/671" }} aria-hidden="true" />
                 <div
-                  className="relative bg-white rounded-[20px] overflow-hidden"
-                  style={{ aspectRatio: "635/671" }}
+                  className="absolute inset-0 bg-white rounded-[20px] overflow-hidden"
                 >
                   {/* Boxing ring */}
                   <div className="absolute" style={{ left: "-46.6%", top: "-39.8%", width: "148.8%", height: "93.9%" }}>

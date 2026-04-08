@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Crimson_Pro } from "next/font/google";
+import { Inter, Crimson_Pro, Oswald } from "next/font/google";
 import "bootstrap/dist/css/bootstrap-grid.min.css";
 import "./globals.css";
 
@@ -13,6 +13,12 @@ const crimsonPro = Crimson_Pro({
   variable: "--font-crimson-pro",
   subsets: ["latin"],
   weight: ["900"],
+});
+
+const oswald = Oswald({
+  variable: "--font-oswald",
+  subsets: ["latin"],
+  weight: ["400"],
 });
 
 export const viewport: Viewport = {
@@ -31,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${crimsonPro.variable} antialiased`}>
+      <body className={`${inter.variable} ${crimsonPro.variable} ${oswald.variable} antialiased`}>
         {children}
       </body>
     </html>
