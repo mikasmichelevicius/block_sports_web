@@ -122,49 +122,51 @@ export default function Home() {
           <div className="container">
             <div className="row gx-5 justify-center align-items-stretch relative">
               {/* Col 1 — content (5/12) */}
-              <SlideIn className="col-md-6 col-xxl-5 d-flex flex-column justify-content-between">
+              <SlideIn className="col-md-6 col-xxl-5 d-flex flex-column" style={{ gap: "clamp(8px, 1.0vw, 14px)" }}>
                 <h1
-                  className="font-heading font-black text-[#354c41] leading-[1.2] m-0"
-                  style={{ fontSize: "clamp(36px, 3.9vw, 70px)" }}
+                  className="font-heading font-black text-[#354c41] leading-[1.00] m-0"
+                  style={{ fontSize: "clamp(32px, 3.4vw, 60px)" }}
                 >
                   Performance{" "}
                   <br />
                   &amp; playful spirit
                 </h1>
 
-                <div
-                  className="text-[#354c41] text-[clamp(13px,1.2vw,16px)] font-medium font-sans leading-[1.6]"
-                >
-                  <p className="mb-3">
-                    Block Sports, located in Naujamiestis inside the iconic Loftas quarter — a raw, industrial space in
-                    former factory buildings — offers a modern, high-energy training environment for those who want more
-                    than a typical gym.
-                  </p>
-                  <p className="mb-3">
-                    We specialize in boxing, strength training, and performance-based strength measurements, led by
-                    experienced coaches. Whether you&apos;re a beginner or experienced, every session is designed to
-                    build real skill, power, and measurable progress.
-                  </p>
-                  <p className="mb-3">
-                    Block Sports is modern, hip, and community-driven — where serious training meets an authentic
-                    industrial vibe in the heart of Vilnius.
-                  </p>
+                <div className="flex flex-col" style={{ gap: "clamp(8px, 0.6vw, 12px)" }}>
+                  <div
+                    className="text-[#354c41] text-[clamp(12px,1.05vw,14px)] font-medium font-sans leading-[1.6]"
+                  >
+                    <p className="mb-3">
+                      Block Sports, located in Naujamiestis inside the iconic Loftas quarter — a raw, industrial space in
+                      former factory buildings — offers a modern, high-energy training environment for those who want more
+                      than a typical gym.
+                    </p>
+                    <p className="mb-3">
+                      We specialize in boxing, strength training, and performance-based strength measurements, led by
+                      experienced coaches. Whether you&apos;re a beginner or experienced, every session is designed to
+                      build real skill, power, and measurable progress.
+                    </p>
+                    <p className="mb-3">
+                      Block Sports is modern, hip, and community-driven — where serious training meets an authentic
+                      industrial vibe in the heart of Vilnius.
+                    </p>
+                  </div>
+
+                  <Link
+                    href="/membership"
+                    className="bg-[#d36560] inline-flex items-center justify-center rounded-[6px] text-white text-[16px] font-medium font-sans leading-[24px] no-underline self-start"
+                    style={{ width: "174px", height: "40px" }}
+                  >
+                    Join us here
+                  </Link>
                 </div>
 
-                <Link
-                  href="/membership"
-                  className="bg-[#d36560] inline-flex items-center justify-center rounded-[6px] text-white text-[16px] font-medium font-sans leading-[24px] no-underline self-start"
-                  style={{ width: "174px", height: "40px" }}
-                >
-                  Join us here
-                </Link>
-
-                <div className="flex flex-col gap-3">
+                <div className="flex flex-col gap-3" style={{ marginTop: "auto" }}>
                   <p
                     className="font-normal text-[#354c41] leading-tight m-0"
-                    style={{ fontFamily: "var(--font-oswald)", fontSize: "clamp(28px, 2.8vw, 50px)" }}
+                    style={{ fontFamily: "var(--font-oswald)", fontSize: "clamp(22px, 2.3vw, 40px)" }}
                   >
-                    Or get our mobile app to sign up for classes
+                    Or get our mobile app<br />to sign up for classes
                   </p>
                   <div className="flex gap-3 items-center">
                     <a href="https://apps.apple.com/lt/app/block-sports-gym/id6761255231" target="_blank" rel="noopener noreferrer">
@@ -181,7 +183,7 @@ export default function Home() {
               {/* Col 2 — photo collage (7/12) */}
               <div className="col-md-6 col-xxl-5 relative">
                 {/* Spacer drives column height via aspect-ratio; image fills absolutely */}
-                <div style={{ aspectRatio: "635/671" }} aria-hidden="true" />
+                <div style={{ aspectRatio: "1/1" }} aria-hidden="true" />
                 <div
                   className="absolute inset-0 bg-white rounded-[20px] overflow-hidden"
                 >
