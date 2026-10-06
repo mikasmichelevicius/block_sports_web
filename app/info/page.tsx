@@ -19,7 +19,7 @@ export default function InfoPage() {
               Information
             </h1>
             <div className="row gx-5">
-              <div className="col-12 col-xl-5 mb-8 mb-xl-0">
+              <div className="col-12 col-xl-6 mb-8 mb-xl-0">
                 <p className="font-sans font-bold text-[20px] leading-[24px] mb-[13px] mt-0">Opening times</p>
                 <ul className="font-sans font-medium text-[13px] leading-[20px] xl:text-[16px] xl:leading-[24px] list-disc m-0 pl-[24px]">
                   <li>Monday: 07:00 → 20:00</li>
@@ -31,11 +31,11 @@ export default function InfoPage() {
                   <li>Sunday: Closed</li>
                 </ul>
               </div>
-              <div className="col-12 col-xl-7">
+              <div className="col-12 col-xl-6">
                 <p className="font-sans font-bold text-[20px] leading-[24px] mb-[13px] mt-0">Contact</p>
                 <div className="font-sans font-medium text-[13px] leading-[20px] xl:text-[16px] xl:leading-[24px]">
-                  <p className="mb-0">info@blocksports.lt</p>
-                  <p className="mb-0">+37062692132</p>
+                  <p className="mb-0">info@blockboxing.com</p>
+                  <p className="mb-0">+37069329099</p>
                   <p className="m-0">Vytenio g. 52, Vilnius, Lithuania</p>
                 </div>
               </div>
@@ -55,7 +55,7 @@ export default function InfoPage() {
                     <p className="font-sans font-bold text-[20px] leading-[24px] mb-[13px] mt-0">Boxing</p>
                     <ul className="font-sans font-medium text-[13px] leading-[20px] xl:text-[16px] xl:leading-[24px] list-disc m-0 pl-[24px]">
                       <li>All adult group boxing trainings - €97</li>
-                      <li>All youth boxing + strength trainings - €97</li>
+                      <li>Youth boxing 2x/week - €75, 1x/week - €50</li>
                       <li>Adult boxing &amp; strength unlimited - €204</li>
                       <li>Single group training - €21</li>
                     </ul>
@@ -77,17 +77,16 @@ export default function InfoPage() {
                     <p className="font-sans font-bold text-[20px] leading-[24px] mb-[13px] mt-0">Special offers</p>
                     <ul className="font-sans font-medium text-[13px] leading-[20px] xl:text-[16px] xl:leading-[24px] list-disc m-0 pl-[24px]">
                       <li>Yoga - €21 (free for strength unlimited)</li>
-                      <li>Individualized massages with a massage therapist - 45, 60 or 90min sessions with prices of €42, €52 and €63 respectively.</li>
-                      <li>Individual performance testing and profiling (Hawkin Dynamics force plates, Vitruve) - €120</li>
+<li>Individual performance testing and profiling (Hawkin Dynamics force plates, Vitruve) - €120</li>
                       <li>Free performance testing events for Strength Unlimited subscribers</li>
                     </ul>
                   </div>
                   <div>
                     <p className="font-sans font-bold text-[20px] leading-[24px] mb-[13px] mt-0">Other</p>
                     <ul className="font-sans font-medium text-[13px] leading-[20px] xl:text-[16px] xl:leading-[24px] list-disc m-0 pl-[24px]">
-                      <li>Boxing youth family deal (two or more kids) - €85/per kid</li>
-                      <li>Community events - free for members.</li>
+<li>Community events - free for members.</li>
                       <li>Individual trainings - contact for pricing</li>
+                      <li>Individualized massages with massage therapist in house - contact for pricing</li>
                     </ul>
                   </div>
                 </div>
@@ -101,14 +100,14 @@ export default function InfoPage() {
               Other information
             </h2>
             <div className="row gx-5">
-              <div className="col-12 col-xl-5 mb-8 mb-xl-0">
+              <div className="col-12 col-xl-6 mb-8 mb-xl-0">
                 <p className="font-sans font-bold text-[20px] leading-[24px] mb-[13px] mt-0">
                   Termination &amp; Pause
                 </p>
                 <div className="font-sans font-medium text-[13px] leading-[20px] xl:text-[16px] xl:leading-[24px]">
                   <ul className="list-disc pl-[24px] m-0">
                     <li>
-                      To cancel your membership, email: info@blocksports.lt The cancellation
+                      To cancel your membership, email: info@blockboxing.com The cancellation
                       date is based on when we receive your email and your contract&apos;s
                       notice period.
                     </li>
@@ -123,7 +122,7 @@ export default function InfoPage() {
                   </ul>
                 </div>
               </div>
-              <div className="col-12 col-xl-7">
+              <div className="col-12 col-xl-6">
                 <p className="font-sans font-bold text-[20px] leading-[24px] mb-[13px] mt-0">Location rent</p>
                 <div className="font-sans font-medium text-[13px] leading-[20px] xl:text-[16px] xl:leading-[24px]">
                   <p className="mb-0">We rent out one of our spaces for:</p>
@@ -154,7 +153,7 @@ export default function InfoPage() {
             >
               <span className="font-bold underline">Vytenio g. 52, Vilnius, Lithuania</span>
             </a>
-            <p className="font-bold leading-[24px] m-0 shrink-0">+37062692132</p>
+            <p className="font-bold leading-[24px] m-0 shrink-0">+37069329099</p>
             <Link href="/membership" className="font-bold leading-[24px] m-0 underline shrink-0 no-underline" style={{ color: "#354c41" }}>Membership/Shop</Link>
           </div>
         </div>

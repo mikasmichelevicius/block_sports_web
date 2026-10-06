@@ -62,6 +62,13 @@ export default function MobileNav() {
               Home
             </Link>
             <Link
+              href="/coaches"
+              className="text-white text-[5.5vw] font-normal font-sans leading-normal no-underline"
+              onClick={() => setOpen(false)}
+            >
+              Coaches
+            </Link>
+            <Link
               href="/schedule?type=boxing"
               className="text-white text-[5.5vw] font-normal font-sans leading-normal no-underline"
               onClick={() => setOpen(false)}
@@ -75,14 +82,7 @@ export default function MobileNav() {
             >
               Strength Calendar
             </Link>
-            <Link
-              href="https://backoffice.bsport.io/m/Block%20Sports/5529/private-service/?tabSelected=2&index=2"
-              className="text-white text-[5.5vw] font-normal font-sans leading-normal no-underline"
-              onClick={() => setOpen(false)}
-            >
-              Massages
-            </Link>
-            <Link
+<Link
               href="https://backoffice.bsport.io/m/Block%20Sports/5529/subscription/?tabSelected=2&index=2"
               className="text-white text-[5.5vw] font-normal font-sans leading-normal no-underline"
               onClick={() => setOpen(false)}

@@ -15,10 +15,10 @@ interface NavItem {
 
 const NAV_ITEMS: NavItem[] = [
   { label: "Home", href: "/" },
+  { label: "Coaches", href: "/coaches" },
   { label: "Boxing Calendar", href: "/schedule?type=boxing" },
   { label: "Strength Calendar", href: "/schedule?type=strength" },
-  { label: "Massages", href: "https://backoffice.bsport.io/m/Block%20Sports/5529/private-service/?tabSelected=2&index=2" },
-  { label: "Subscriptions", href: "https://backoffice.bsport.io/m/Block%20Sports/5529/subscription/?tabSelected=2&index=2" },
+{ label: "Subscriptions", href: "https://backoffice.bsport.io/m/Block%20Sports/5529/subscription/?tabSelected=2&index=2" },
   { label: "Passes", href: "https://backoffice.bsport.io/m/Block%20Sports/5529/pass/?tabSelected=3&index=3" },
   { label: "Info", href: "/info" },
   { label: "User Area", href: "https://backoffice.bsport.io/c/5529/subscription/" },
